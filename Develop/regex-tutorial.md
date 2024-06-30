@@ -51,6 +51,12 @@ Character classes match any character within the specified set.
 ### Flags
 Flags are optional parameters that change how the regex engine matches the pattern.
 
+`i`: Case-insensitive matching
+`g`: Global search
+`m`: Multiline search
+
+In the context of email matching, flags are typically not used as the pattern is case-sensitive and designed to match a single occurrence.
+
 ### Grouping and Capturing
 Grouping constructs are used to group multiple tokens together and create capture groups.
 
@@ -68,14 +74,47 @@ Bracket expressions match a single character contained within the brackets.
 Greedy quantifiers match as many occurrences as possible, while lazy quantifiers match as few as possible.
 
 ### Boundaries
-Boundaries match positions within the string, such as word boundaries.
+Boundaries match positions within the string, such as word boundaries. 
+
+`\b`: Matches a word boundary.
+`\B`: Matches a non-word boundary.
+
+Boundaries are not specifically used in this email regex.
 
 ### Back-references
 Back-references match the same text as previously matched by a capturing group.
 
+Example (not applicable for email regex):
+
+`(foo)\1`: Matches `foofoo`
+
+Back-references are not used in this email regex.
+
 ### Look-ahead and Look-behind
 Look-ahead and look-behind assertions match a group before or after a main expression without including it in the result.
-Author
+
+Positive Look-ahead: `(?=...)`
+Negative Look-ahead: `(?!...)`
+Positive Look-behind: `(?<=...)`
+Negative Look-behind: `(?<!...)`
+
+These assertions are not used in this email regex.
+
+## Examples
+
+Valid Email Addresses
+    `example@example.com`
+    `user.name@domain.co`
+    `user_name123@domain.io`
+    `username@sub.domain.com`
+
+Invalid Email Addresses
+    `plainaddress` (missing `@` and domain)
+    `@no-local-part.com` (missing local part)
+    `Outlook Contact <outlook-contact@domain.com>` (name and address)
+    `no-at.domain.com` (missing `@`)
+    `no-tld@domain` (missing top-level domain)
+    `user@.invalid.com` (invalid domain)
 
 ## Author
 
