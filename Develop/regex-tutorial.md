@@ -24,6 +24,8 @@ regex
 - [Boundaries](#boundaries)
 - [Back-references](#back-references)
 - [Look-ahead and Look-behind](#look-ahead-and-look-behind)
+- [Examples](#examples)
+- [Author](#author)
 
 ## Regex Components
 
