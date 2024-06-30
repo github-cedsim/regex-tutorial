@@ -1,10 +1,15 @@
-# Title (replace with your title)
+# Regex Tutorial: Matching an Email
 
-Introductory paragraph (replace this with your text)
+This tutorial explains how to create a regular expression pattern to match an email address. The pattern will match the username, domain name, and domain suffix of an email address. The tutorial will provide examples of valid and invalid email addresses that match the pattern.
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+Suppose you need to validate email addresses in a web form or application. In that case, you can use a regular expression (regex) pattern to match the email address format and ensure that it meets the required criteria. This tutorial will guide you through creating a regex pattern to match an email address and explain each component of the pattern. 
+
+The regex for matching an email address is:
+
+regex
+/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 
 ## Table of Contents
 
